@@ -1,0 +1,194 @@
+.hero {
+  position: relative;
+  padding-block: clamp(64px, 10vw, 120px) clamp(48px, 8vw, 80px);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.55;
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 90%);
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.hero-inner {
+  position: relative;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: auto 1.5fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.hero-name {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 14px;
+  animation: hero-rise var(--duration-base) var(--ease) both;
+}
+
+.hero-role {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 22px;
+  animation: hero-rise var(--duration-base) var(--ease) both;
+  animation-delay: 40ms;
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.15;
+  max-width: 20ch;
+  margin-bottom: 20px;
+  animation: hero-rise var(--duration-base) var(--ease) both;
+  animation-delay: 80ms;
+}
+
+.hero-support {
+  color: var(--text-muted);
+  max-width: 54ch;
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+  animation: hero-rise var(--duration-base) var(--ease) both;
+  animation-delay: 120ms;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  animation: hero-rise var(--duration-base) var(--ease) both;
+  animation-delay: 160ms;
+}
+
+.hero-secondary-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.hero-secondary-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.hero-secondary-links a:hover {
+  color: var(--accent);
+}
+
+.hero-stack {
+  position: relative;
+  padding-left: 20px;
+  align-self: center;
+}
+
+.hero-stack-line {
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--border-strong);
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: hero-line-draw 650ms var(--ease) 200ms both;
+}
+
+.hero-stack-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  opacity: 0;
+  animation: hero-item-in var(--duration-base) var(--ease) forwards;
+}
+
+.hero-stack-item:nth-child(2) { animation-delay: 260ms; }
+.hero-stack-item:nth-child(3) { animation-delay: 320ms; }
+.hero-stack-item:nth-child(4) { animation-delay: 380ms; }
+.hero-stack-item:nth-child(5) { animation-delay: 440ms; }
+.hero-stack-item:nth-child(6) { animation-delay: 500ms; }
+.hero-stack-item:nth-child(7) { animation-delay: 560ms; }
+.hero-stack-item:nth-child(8) { animation-delay: 620ms; }
+
+.hero-stack-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-line-draw {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes hero-item-in {
+  from { opacity: 0; transform: translateX(-6px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.hero-photo-wrapper {
+  animation: hero-rise var(--duration-base) var(--ease) both;
+}
+
+.hero-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-photo-wrapper {
+    order: -1;
+    justify-self: center;
+    margin-bottom: 8px;
+  }
+  .hero-photo {
+    width: 140px;
+    height: 140px;
+  }
+  .hero-stack {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+}

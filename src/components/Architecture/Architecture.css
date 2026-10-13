@@ -1,0 +1,76 @@
+.build-pipeline {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  min-width: max-content;
+  padding-bottom: 8px;
+}
+
+.build-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  padding-right: 18px;
+}
+
+.build-step-index {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--accent);
+}
+
+.build-step-arrow {
+  color: var(--text-faint);
+  margin-left: 6px;
+}
+
+.arch-examples {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.arch-example h3 {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+.arch-layers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: max-content;
+}
+
+.arch-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.arch-layer span:first-child {
+  padding: 10px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  min-width: 200px;
+  text-align: center;
+}
+
+.arch-layer-arrow {
+  color: var(--text-faint);
+  padding: 4px 0;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 780px) {
+  .arch-examples {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,55 @@
+.experience-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  padding-block: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.experience-period {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  color: var(--text-faint);
+}
+
+.experience-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.experience-company {
+  color: var(--accent);
+  font-size: 0.92rem;
+  margin-bottom: 14px;
+}
+
+.experience-focus {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience-focus li {
+  position: relative;
+  padding-left: 16px;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+}
+
+.experience-focus li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

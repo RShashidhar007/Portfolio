@@ -1,0 +1,15 @@
+.section-header {
+  margin-bottom: 40px;
+  max-width: 640px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.6rem, 2.6vw, 2.15rem);
+}
+
+.section-subtitle {
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}

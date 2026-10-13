@@ -1,0 +1,30 @@
+.education-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  max-width: 560px;
+}
+
+.education-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.education-institution {
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.education-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  color: var(--accent);
+}
+
+.education-dot {
+  color: var(--text-faint);
+}

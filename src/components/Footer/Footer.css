@@ -1,0 +1,43 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding-block: 32px 20px;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.footer-role {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-copy {
+  color: var(--text-faint);
+  font-size: 0.82rem;
+}
