@@ -1,67 +1,49 @@
 /*
-  Design tokens.
-  Palette is grounded in the subject matter: R. Shashidhar's flagship
-  project is literally named "CodeForge", and his current work is with an
-  iron-ore business — so the accent is a forged-metal amber/copper against
-  a dark iron-charcoal base, rather than a generic SaaS indigo or teal.
+  Design tokens for Shashidhar's immersive 3D-inspired portfolio.
+  Amber metal highlights remain available in the light theme; dark mode
+  uses cool teal light, dimensional surfaces, and a deep space backdrop.
 */
-
 :root {
-  /* Dark (default) */
-  --bg: #0b0e14;
-  --bg-raised: #12161f;
-  --bg-inset: #171c27;
-  --border: #262c3a;
-  --border-strong: #384056;
-
-  --text: #e9ecf3;
-  --text-muted: #9aa3b8;
-  --text-faint: #626c82;
-
-  --accent: #e8a33d;
-  --accent-strong: #f4b95c;
-  --accent-text: #1a1305;
-
+  --bg: #070a12;
+  --bg-raised: #0d1320;
+  --bg-inset: #121b2c;
+  --border: rgba(120, 150, 205, 0.18);
+  --border-strong: rgba(120, 160, 230, 0.34);
+  --text: #e9f1fa;
+  --text-muted: #9aaec3;
+  --text-faint: #62758d;
+  --accent: #72e6d1;
+  --accent-strong: #a2fff0;
+  --accent-text: #061312;
   --success: #5cb98a;
   --danger: #e5766c;
-
   --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
   --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
-
-  --radius-sm: 5px;
-  --radius-md: 8px;
-  --radius-lg: 14px;
-
-  --shadow-card: 0 1px 0 rgba(0, 0, 0, 0.4);
-  --content-width: 1120px;
-
-  --duration-fast: 140ms;
-  --duration-base: 220ms;
+  --radius-sm: 999px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --shadow-card: 0 16px 44px rgba(0, 0, 0, 0.2);
+  --content-width: 1240px;
+  --duration-fast: 160ms;
+  --duration-base: 240ms;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
-
   color-scheme: dark;
 }
-
 :root[data-theme="light"] {
-  --bg: #f7f5f1;
+  --bg: #f4f8fa;
   --bg-raised: #ffffff;
-  --bg-inset: #efece5;
-  --border: #ddd8cd;
-  --border-strong: #c4bdac;
-
-  --text: #201c14;
-  --text-muted: #5b5647;
-  --text-faint: #8a8471;
-
-  --accent: #b5721c;
-  --accent-strong: #96600f;
-  --accent-text: #fffaf0;
-
+  --bg-inset: #eaf3f4;
+  --border: rgba(38, 85, 100, 0.16);
+  --border-strong: rgba(30, 120, 125, 0.34);
+  --text: #10242d;
+  --text-muted: #526974;
+  --text-faint: #7a919a;
+  --accent: #087f78;
+  --accent-strong: #056b65;
+  --accent-text: #ffffff;
   --success: #2f8a5c;
   --danger: #c94b3f;
-
-  --shadow-card: 0 1px 2px rgba(32, 28, 20, 0.06);
-
+  --shadow-card: 0 12px 32px rgba(20, 50, 60, 0.08);
   color-scheme: light;
 }
